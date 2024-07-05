@@ -10,7 +10,7 @@
 </head>
 <body>
     <div>
-        <button id="btn1" onmousedown="pressMe(this)">
+        <button id="btn1"   >
             press Me
         </button>
     </div>
@@ -20,6 +20,8 @@
     <script>
 const btn1= document.getElementById("btn1");
 const ent = document.getElementById("et")
+
+btn1.style.backgroundColor="red"
 function pressMe()
 {
     ent.style.backgroundColor="yellow";
@@ -37,20 +39,21 @@ function pressMe()
 ent.innerHTML="hello";
 }
 
-btn1.addEventListener("mousedown", pressMe);
+
 function mouseUp()
 {
-
+btn1.style.backgroundColor="red"
 }
-document.addEventListener("mouseup",(event)=>{
-if(box.style.backgroundColor=== "lightgreen")
-mouseUp();
-})
-document.addEventListener('mouseup', (event) => {
+function mouseDown()
+{
+    btn1.style.backgroundColor="blue"
+}
+btn1.addEventListener("mousedown",mouseDown)
+document.addEventListener("mouseup", (event) => {
     // Only change color back if the mouse was released
-    if (box.style.backgroundColor === 'lightgreen') {
+if (btn1.style.backgroundColor ==="blue") {
         mouseUp();
-    }
+}
 });
     </script>
 </body>
