@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <button id="btn1" onmousedown="pressMe(this)">
+            press Me
+        </button>
+    </div>
+<div id ="et">
+
+</div>
+    <script>
+const btn1= document.getElementById("btn1");
+const ent = document.getElementById("et")
+function pressMe()
+{
+    ent.style.backgroundColor="yellow";
+    ent.style.color="black";
+    ent.style.fontSize="20px";
+    ent.style.borderRadius="10px";
+    ent.style.padding="10px";
+    ent.style.margin="10px";
+    ent.style.position="absolute";
+    ent.style.top="50%";
+    ent.style.left="50%";
+    ent.style.transform="translate(-50%, -50%)";
+    ent.style.zIndex="100";
+ //   ent.innerHTML="Hello";
+ent.innerHTML="hello";
+}
+
+btn1.addEventListener("mousedown", pressMe);
+function mouseUp()
+{
+
+}
+document.addEventListener("mouseup",(event)=>{
+if(box.style.backgroundColor=== "lightgreen")
+mouseUp();
+})
+document.addEventListener('mouseup', (event) => {
+    // Only change color back if the mouse was released
+    if (box.style.backgroundColor === 'lightgreen') {
+        mouseUp();
+    }
+});
+    </script>
+</body>
+</html>

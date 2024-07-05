@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.but1
+{
+    background-color: red;
+}
+    </style>
+</head>
+<body>
+    <div>
+       <button class ="but1" onmouseout="doIt(this)">
+press
+       </button> 
+       <button class="but2" onclick=""> </button>
+    </div>
+<div class="but2" onmouseout="doIt(this)"></div>
+    <script>
+        const btn1 = document.querySelector(".but1");
+        const placeR= document.querySelector(".but2");
+// on mouse what the fuck is this shit confusing man
+
+function doIt(element)
+{
+    
+   
+    element.style.backgroundColor ="pink";   
+    setTimeout(()=>{
+        element.style.backgroundColor="blue";
+    
+       // placeR.innerHTML = "Goodbye";
+     },1000);
+  
+
+}
+    </script>
+</body>
+</html>

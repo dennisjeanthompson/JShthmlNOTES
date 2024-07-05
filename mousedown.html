@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmousedown Example</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #000;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" onmousedown="mouseDown(this)" onmouseup="mouseUp(this)">
+        Press me
+    </div>
+
+    <script>
+        // Function to change the background color when the mouse button is pressed down
+        function mouseDown(element) {
+            element.style.backgroundColor = 'lightgreen';
+            element.innerHTML = 'Mouse Down';
+        }
+
+        // Function to change the background color back when the mouse button is released
+        function mouseUp(element) {
+            element.style.backgroundColor = 'lightblue';
+            element.innerHTML = 'Press me';
+        }
+    </script>
+</body>
+</html>

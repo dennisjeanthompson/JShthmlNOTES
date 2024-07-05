@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmousedown Example</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #000;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        Press me
+    </div>
+
+    <script>
+        const box = document.getElementById('box');
+
+        // Function to change the background color when the mouse button is pressed down
+        function mouseDown() {
+            box.style.backgroundColor = 'lightgreen';
+            box.innerHTML = 'Mouse Down';
+        }
+
+        // Function to change the background color back when the mouse button is released
+        function mouseUp() {
+            box.style.backgroundColor = 'lightblue';
+            box.innerHTML = 'Press me';
+        }
+
+        // Add event listeners
+        box.addEventListener('mousedown', mouseDown);
+        document.addEventListener('mouseup', (event) => {
+            // Only change color back if the mouse was released
+        //    if (box.style.backgroundColor === 'lightgreen') { you don't need this too part's what
+                mouseUp();
+         //   }
+        });
+    </script>
+</body>
+</html>
