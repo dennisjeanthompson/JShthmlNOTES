@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmouseout Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Style for the hover box */
+.hover-box {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="hover-box" onmouseout="changeColorBack(this)">
+        Hover over me!
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        const  hover =  document.getElementById("hover-box");
+        function changeColorBack(element) {
+            element.style.backgroundColor = "green";
+            setTimeout(() => {
+                element.style.backgroundColor = "lightblue";
+            }, 2000); // Change color to green after hovering and removing pointer  after  1 second it will go back to orig color
+        }
+    </script>
+</body>
+</html>
